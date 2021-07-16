@@ -4,6 +4,20 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
+timeLeft = 30;
+
+function countdown() {
+	timeLeft--;
+	document.getElementById("seconds-remaining").innerHTML = String( timeLeft );
+	if (timeLeft > 0) {
+		setTimeout(countdown, 1000);
+	}
+};
+
+setTimeout(countdown, 1000);
+
+
+
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -52,7 +66,7 @@ function resetBoard() {
 
 (function shuffle() {
   cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 16);
+    let randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
   });
 })();
