@@ -1,10 +1,21 @@
+// Fallout Pre-Loader Boot System
+
+//var loader = document.querySelector(".pre-loading-screen");
+
+//window.addEventListener("load", vanish);
+
+//function vanish() {
+ // pre-loading-screen.classList.add("disappear");};
+
+
+
 const cards = document.querySelectorAll('.perk-card');
 
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-timeLeft = 30;
+timeLeft = 100;
 
 function countdown() {
 	timeLeft--;
