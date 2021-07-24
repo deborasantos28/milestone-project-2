@@ -8,7 +8,11 @@
     height: 100vh;
     display: flex-wrap;
     background-color:black;
+    background-image: url(../img/fallout-pipboy-screen.jpg) no-repeat cover fixed;
+    backdrop-filter: blur;
+    backdrop-filter: 1rem;
   }
+  
 /*
   .pre-loading-screen {
     position: fixed;
@@ -31,11 +35,7 @@
     }
   }
 */
-  img #bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;}
+
 
  #page-title{
  font-family: 'Lobster', sans-serif;
@@ -88,7 +88,7 @@
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform .5s;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    box-shadow: 1px 1px 1px rgba(25,149,21);
   }
 
   .perk-card:active {
@@ -108,7 +108,7 @@
     padding: 10px;
     position: absolute;
     border-radius: 5px;
-    background:black;
+    background: black;
     backface-visibility: hidden;
   }
   

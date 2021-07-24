@@ -8,79 +8,28 @@
  // pre-loading-screen.classList.add("disappear");};
 
 
-
-const cards = document.querySelectorAll('.perk-card');
-
-let hasFlippedCard = false;
-let lockBoard = false;
-let firstCard, secondCard;
-
-timeLeft = 100;
-
-function countdown() {
-	timeLeft--;
-	document.getElementById("seconds-remaining").innerHTML = String( timeLeft );
-	if (timeLeft > 0) {
-		setTimeout(countdown, 1000);
-	}
-};
-
-setTimeout(countdown, 1000);
-
-
-
-function flipCard() {
-  if (lockBoard) return;
-  if (this === firstCard) return;
-
-  this.classList.add('flip');
-
-  if (!hasFlippedCard) {
-    hasFlippedCard = true;
-    firstCard = this;
-
-    return;
+ class AtomicMemory {
+  constructor(totalTime, cards) {
+      this.cardsArray = cards;
+      this.totalTime = totalTime;
+      this.timeRemaining = totalTime;
+      this.timer = document.getElementById('time-remaining')
+      this.ticker = document.getElementById('flips');
   }
-
-  secondCard = this;
-  checkForMatch();
+  startGame() {
+    this.totalClicks = 0;
+    this.timeRemaining = this.totalTime;
+    this.cardToCheck = null;
+    this.matchedCards = [];
+    this.busy = true;
+    setTimeout(() => {
+        this.shuffleCards(this.cardsArray);
+        this.countdown = this.startCountdown();
+        this.busy = false;
+    }, 500)
+    this.hideCards();
+    this.timer.innerText = this.timeRemaining;
+    this.ticker.innerText = this.totalClicks;
 }
 
-function checkForMatch() {
-  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
-
-  isMatch ? disableCards() : unflipCards();
 }
-
-function disableCards() {
-  firstCard.removeEventListener('click', flipCard);
-  secondCard.removeEventListener('click', flipCard);
-
-  resetBoard();
-}
-
-function unflipCards() {
-  lockBoard = true;
-
-  setTimeout(() => {
-    firstCard.classList.remove('flip');
-    secondCard.classList.remove('flip');
-
-    resetBoard();
-  }, 1500);
-}
-
-function resetBoard() {
-  [hasFlippedCard, lockBoard] = [false, false];
-  [firstCard, secondCard] = [null, null];
-}
-
-(function shuffle() {
-  cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * 12);
-    card.style.order = randomPos;
-  });
-})();
-
-cards.forEach(card => card.addEventListener('click', flipCard));
-
