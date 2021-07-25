@@ -1,121 +1,153 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    height: 100vh;
-    display: flex-wrap;
-    background-color:black;
-    background-image: url(../img/fallout-pipboy-screen.jpg) no-repeat cover fixed;
-    backdrop-filter: blur;
-    backdrop-filter: 1rem;
-  }
-  
-/*
-  .pre-loading-screen {
-    position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  } 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  .disappear{
-    animation: vanish 3s forwards;
+body {
+  height: 100vh;
+  display: flex-wrap;
+  background-color:black;
+  background: url(img/fallout-pipboy-screen.jpg) center cover no-repeat;
+  backdrop-filter: blur;
+  backdrop-filter: 1rem;
+}
+
+
+/*
+.pre-loading-screen {
+  position: fixed;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+} 
+
+.disappear{
+  animation: vanish 3s forwards;
+}
+@keyframes vanish {
+  100%{
+    opacity: 0;
+    visibility: hidden;
   }
-  @keyframes vanish {
-    100%{
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
+}
 */
 
 
- #page-title{
- font-family: 'Lobster', sans-serif;
- font-weight: 400;
- font-size: 3rem;
- text-align: center;
- color: rgba(25,149,21);
- }
+#page-title{
+font-family: 'Lobster', sans-serif;
+font-weight: 400;
+font-size: 3rem;
+text-align: center;
+color: rgba(25,149,21);
+}
 
- .game-info-container {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-evenly;
+.game-info-container {
+grid-column: 1 / -1;
+display: flex;
+justify-content: space-evenly;
 }
 
 .game-info {
-  font-family: 'Lobster Two', sans-serif;
-  font-weight: 400;
-  color: rgba(25,149,21);
-  font-size: 3rem;
+font-family: 'Lobster Two', sans-serif;
+font-weight: 400;
+color: rgba(25,149,21);
+font-size: 3rem;
 }
 
 .game-container {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
-  margin: 50px;
-  justify-content: center;
-  perspective: 500px;
+display: grid;
+grid-template-columns: repeat(4, auto);
+grid-gap: 10px;
+margin: 50px;
+justify-content: center;
+perspective: 500px;
 }
-  .memory-game {
-    width: 640px;
-    height: 640px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    perspective: 1000px;
-  }
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
 #page-intro{
-  font-family: 'Lobster Two', sans-serif;
-  font-size: 2rem;
-  color: rgba(25,149,21);
-  text-align: center;
+font-family: 'Lobster Two', sans-serif;
+font-size: 2rem;
+color: rgba(25,149,21);
+text-align: center;
 }
-  .perk-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
-    margin: 5px;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform .5s;
-    box-shadow: 1px 1px 1px rgba(25,149,21);
-  }
+.perk-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(25,149,21);
+}
 
-  .perk-card:active {
-    transform: scale(0.97);
-    transition: transform .2s;
-  }
-  
-  .perk-card.flip {
-    transform: rotateY(180deg);
-  }
-  
-  .card-face,
-  .card-back
-   {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    position: absolute;
-    border-radius: 5px;
-    background: black;
-    backface-visibility: hidden;
-  }
-  
-  .card-face {
-    transform: rotateY(180deg);
-  }
+.perk-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
 
-  div, #footer {
-    background-color: black;
+.perk-card.flip {
+  transform: rotateY(180deg);
+}
+
+.card-face,
+.card-back
+ {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: black;
+  backface-visibility: hidden;
+}
+
+.card-face {
+  transform: rotateY(180deg);
+}
+
+div, #footer {
+  background-color: transparent;
+}
+
+.score-panel {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.score-panel .atoms {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+
+.score-panel .atoms li {
+	list-style: none;
+	display: inline-block;
+}
+
+.score-panel .restart {
+	float: right;
+	cursor: pointer;
+}
+
+.fa-atom {
+	color: rgba(25,149,21);
+}
+
+.timer {
+	display: inline-block;
+	margin: 0 1rem;
 }

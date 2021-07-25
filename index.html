@@ -18,7 +18,7 @@
 </head>
 
 <body>
-  <!-- <div class="pre-loading-screen">
+<!-- <div class="pre-loading-screen">
     <img src="Pipboy-boot-sequence.gif" alt="">
   </div> -->
   <div id="header">
@@ -29,14 +29,22 @@
     <h1 id="page-intro">Find out what makes you S.P.E.C.I.A.L</h1>
   </div>
   <div class="container">
-    <div class="game-info-container">
-      <div class="game-info">
-        <p> Time: <span id="seconds-remaining">100</span></p>
+    <section class="score-panel">
+      <ul class="atoms">
+        <li><i class="fas fa-atom"></i></li>
+        <li><i class="fas fa-atom"></i></li>
+        <li><i class="fas fa-atom"></i></li>
+      </ul>
+
+      <span class="moves">0</span> Move(s)
+
+        <div class="timer">
+        </div>
+
+        <div class="restart" onclick=startGame()>
+        <i class="fa fa-repeat"></i>
       </div>
-      <div class="game-info">
-        <p>Flips: <span id="flips">0</span></p>
-      </div>
-    </div>
+    </section>
   </div>
   <section class="memory-game">
     <div class="perk-card" data-framework="strength">
@@ -95,25 +103,13 @@
   </section>
   <footer class="container-fluid">
     <div class="row">
-      <div class="col-sm-4 score-panel">
-        <ul class="atoms">
-          <li><i class="fas fa-atom"></i></li>
-          <li><i class="fas fa-atom"></i></li>
-          <li><i class="fas fa-atom"></i></li>
-        </ul></div>
       <div class="col-sm-4">
-        <div class="progress">
-          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%"
-            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
       </div>
       <div class="col-sm-4">
-        <div class="game-info-container">
-        <div class="game-info">
-          <p> Time: <span id="seconds-remaining">100</span></p>
-        </div>
+      
       </div>
+      <div class="col-sm-4">
+        
       </div>
   </div>
   </footer>
