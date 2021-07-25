@@ -29,22 +29,14 @@
     <h1 id="page-intro">Find out what makes you S.P.E.C.I.A.L</h1>
   </div>
   <div class="container">
-    <section class="score-panel">
-      <ul class="atoms">
-        <li><i class="fas fa-atom"></i></li>
-        <li><i class="fas fa-atom"></i></li>
-        <li><i class="fas fa-atom"></i></li>
-      </ul>
-
-      <span class="moves">0</span> Move(s)
-
-        <div class="timer">
-        </div>
-
-        <div class="restart" onclick=startGame()>
-        <i class="fa fa-repeat"></i>
+    <div class="game-info-container">
+      <div class="game-info">
+        <p> Time: <span id="seconds-remaining"></span></p>
       </div>
-    </section>
+      <div class="game-info">
+        <p>Flips: <span id="flips">0</span></p>
+      </div>
+    </div>
   </div>
   <section class="memory-game">
     <div class="perk-card" data-framework="strength">

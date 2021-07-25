@@ -126,14 +126,14 @@ div, #footer {
 	margin-bottom: 10px;
 }
 
-.score-panel .atoms {
+.score-panel .fa-radiation-alt {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
 	margin: 0 5px 0 0;
 }
 
-.score-panel .atoms li {
+.score-panel .fa-radiation-alt li {
 	list-style: none;
 	display: inline-block;
 }
@@ -143,7 +143,7 @@ div, #footer {
 	cursor: pointer;
 }
 
-.fa-atom {
+.fa-radiation-alt{
 	color: rgba(25,149,21);
 }
 
