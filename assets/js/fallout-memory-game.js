@@ -7,7 +7,7 @@
 //function vanish() {
  // pre-loading-screen.classList.add("disappear");};
 
- const cards = document.querySelectorAll('.perk-card');
+const cards = document.querySelectorAll('.perk-card');
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -68,3 +68,20 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+
+// Game Timer / Countdown 
+
+var timeLeft = 60;
+    var elem = document.getElementById('timer');
+    
+    var timerId = setInterval(countdown, 1000);
+    
+    function countdown() {
+      if (timeLeft == -1) {
+        clearTimeout(timerId);
+        startCountdown(timer);
+      } else {
+        elem.innerHTML = timeLeft + ' sec remaining';
+        timeLeft--;
+      }
+    }

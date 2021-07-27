@@ -7,10 +7,7 @@
 body {
   height: 100vh;
   display: flex-wrap;
-  background-color:black;
-  background: url(img/fallout-pipboy-screen.jpg) center cover no-repeat;
-  backdrop-filter: blur;
-  backdrop-filter: 1rem;
+  background-color: black;
 }
 
 
@@ -121,33 +118,3 @@ div, #footer {
   background-color: transparent;
 }
 
-.score-panel {
-	text-align: left;
-	margin-bottom: 10px;
-}
-
-.score-panel .fa-radiation-alt {
-	margin: 0;
-	padding: 0;
-	display: inline-block;
-	margin: 0 5px 0 0;
-}
-
-.score-panel .fa-radiation-alt li {
-	list-style: none;
-	display: inline-block;
-}
-
-.score-panel .restart {
-	float: right;
-	cursor: pointer;
-}
-
-.fa-radiation-alt{
-	color: rgba(25,149,21);
-}
-
-.timer {
-	display: inline-block;
-	margin: 0 1rem;
-}
