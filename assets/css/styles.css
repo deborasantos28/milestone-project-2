@@ -15,8 +15,8 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	/*backdrop-filter: blur;
-	backdrop-filter: cover;*/
+	backdrop-filter: blur;
+	backdrop-filter: cover;
   }
   
   .page-title {
@@ -24,7 +24,7 @@
 	font-family: "Lobster", sans-serif;
 	font-weight: normal;
 	text-align: center;
-	font-size: 3em;
+	font-size: 3rem;
   }
   
   .game-info-container {

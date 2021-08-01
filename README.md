@@ -1,65 +1,104 @@
-# Atomic Memory
+# Atomic Memory - Memory Game
+
+## About Atomic Memory
 
 ### Atomic Memory is a memory game inspired and based on the Fallout game series by Bethesda.
 ### This game is a fantastic way to have fun and also boost brain activity by memorizing the cards. <br /> For the fans of the series this is a great way to play a themed memory game.
 
-### 
 
+### Playing memory games can help improve brain functions such as:
+  *  Focus
+  * Concentration 
+  * Visual Recognition 
+  * Short-Term Memory
+
+
+# User Experience (UX)
+
+# Strategy 
+
+## User Stories 
+
+### Reasons why a user would play this game
+ 
+* Improve Short-Term memory
+* Improve Focus and Concentration
+* Stress Relief 
+* Fan of the Fallout Franchise
+
+### Reasons for creating this game
+
+* Provide a fun and interactive way of helping with certain cognitive skills
+
+# Scope
+
+## What to expect as a User
 
 # Features
 
 ## Existing Features
 
+* Start Game Overlay
+
+<img src="assets/img/Screenshot-Overlay.png" width="500">
+
+
 * Header
-<img src="assets/img/Header-Timer-Move-Counter">
 
-   * _The Heart Of Vinyl_ navbar contains 3 main links: Home, Gallery and Join US. The navbar is responsive and identical in all 3 pages. 
-   For this Navbar the design has been kept simple and tidy in it's appearence 
 
-* Background
-<img>
+<img src="assets/img/Header-Timer-Move-counter.png" width="500">
 
-  * The Hero Image has a static image that contains no animation, as it would be distracting and wouldn't fit with the main view of the page. 
-  The hero image is trying to reach across the main message on this page, which is inclusiveness in LGBTQ+ community that is also connected throught the love of music. 
+   * The header is essentially an Overlay Starter, that allows the user to start the game once Clicked.
+
+
+
+* Game Interface / Card Layout 
+
+
+
+<img src="assets/img/Cards-Layout-Backface.png" width="300">
+<Img src="assets/img/Two-cards-matched.png" width="300">
+
+  * The game interface consists of a Grid, that is divisable for better responsiveness in smaller screens. 
 
 * Perk Cards
-<img >
 
-    * The Jumbotron layout is kept quite simple and neat. 
-    The Jumbotron main function is to briefly explain the purpose of the Website and also extend an invitation for anyone that wishes to join the community, they can do so here through the **Join us** button.
 
-    The Jumbotron also contains one of the very few color item links on the page. 
+
+<img src="assets/img/perk-card-example.png" width="200">
+
+  * The Perk Cards are inspired by the Perk cards from Fallout 76. 
+  * All Cards initial letters spell S.P.E.C.I.A.L, which is an acronym for the 7 body senses.
+  * All this cards are in reference to the original fallout games, which will give the user a sense of familiarity
 
 * Timer / Flips
-<img>
 
-    * The Footer is consituted by three columns.
-    The first column contains the contact info of the store and it's address, by adding the contacts to the footer which is one of the main elements that is consistent in all 3 pages, the user is able to see it at all times, therefore making it easier to find.
 
-    The second column contains all the social links in which the Website is represented. 
-    All the icons are grey apart from one as it provides a nice eye catching feature the bottom of the page.
-    Besides the single colour icon, each of the social icons have their own colour when hovering over them as well.
+<img src="assets/img/Header-Timer-Move-counter.png" width="500">
 
-    The Third Column is an informative text about Donations to the charity shop. 
-    By adding this to the footer it gives it importance but it doesn't make it look like it's the main objective of this charity shop.
+  * The Timer and Flips Counter are written inside of the main header div. 
+  * To be able to make both Timer and Flips work, a combination of classes and Ids were used in the HTML, and Later targeted in the Javascript, making it able to Time the game everytime the main screen is clicked and count the mover per each card click. 
 
-* Loading Screen
-<img>
+* Victory Overlay / Modal
 
-   * The Gallery is the second page of _The Heart Of Vinyls_ website and it is constituted by the navbar, the footer and a selection of images forming a gallery display. 
+<img src="assets/img/victory-overlay.png" width="500">
 
-   All the images are related to Vinyls themselves or music, and LGBTQ+ Community. 
+   * The Victory Overlay, Shows up to congratulate the user that their time has ran out and they have lost the game.
+   * A normal normal div was used to store all the text. Together with the CSS and Javascript enabled the Overlay animation and functionality.
+   * The message also contains a Victory gif with the Vault Boy theme.
 
-   To Be able to make this images stand out from just becoming a static gallery, an image zoom animation was added for everytime it's hovered over. 
+* Game Over Overlay / Modal
 
-* Interactiveness
-<img>
 
-  * The Join Us form is the third and final page of the project. 
-  In this page the user will be able to join _The Heart Of Vinyl_ community in a more personal way by volunteering in the store by completing the form. 
+<img src="assets/img/Game-over-overlay.png" width="500" heigth="100">
+
+  * The Game Over Overlay, Shows up to commiserate the user that their time has ran out and they have lost the game.
+   * A normal normal div was used to store all the text. Together with the CSS and Javascript enabled the Overlay animation and functionality.
+   * The message also contains a Defeat gif with the Vault Boy theme.
 
 ## Features Left to implement
 
+  * A move counter Limit, which would also equal to a game over.
 
 # Technologies Used
 
@@ -71,10 +110,10 @@
 # Testing 
 |Test Label  | Test Action | Expected Outcome | Test Outcome |
 |:--|:--|:--|:--:|
-| Navbar | Navigated through all the links in the navbar|All the links to be responsive and lead to their respective pages | PASS 
-|Gallery | Loaded and Refreshed the page, also hovered over the photos | The photos should all load fully and when hovered over they should increase in size due to the hover effect | PASS 
-|Join-us Form | Filled the required fields to make sure it displays the "required field" message. Pressed the submit button to ensure that the form gets submited to an external source | The required fields should display the correct message, unabling the user from sending any information unless all fields have been filled. The form should submit to an external source | PASS
-|Social Media Links | Clicked on all media links to make sure they are responsive and open in a new tab | All social media links should open in a new tab and should be responsive when clicked on | PASS |
+| Timer/Move Counter | When clicked Start it starts ticking the time. When clicked on a card the move count goes up. |All the features are responsive and act as they should | PASS 
+|Card Table / Grid | Clicked in each card, making sure no more than to turn at once. <br/> Matched the cards to be able to see if they respond and stay facing up as expected | All cards match with their pairs, and no more than two turns each time | PASS 
+|Victory / Game Over Overlays | Played the game through matching all the cards, a victory overlay message shows and disappears once clicked on, restarting a new game <br /> Purposely let the timer run out, a Game over overlay message shows and disappears once pressed start a new game | The Overlays appear only when there is an action of Victory or Game Over, and are easily cleared once clicked, to be able to Start a new game | PASS
+|Footer | Refreshed the page, made sure the footer stays at the bottom of the page | The footer is responsive and stays at the bottom of the page | PASS |
 
 ## Validator Testing
 * CSS
@@ -88,7 +127,13 @@
  * This website has been tested and verified to work on various browsers such as : Chrome, Firefox and Edge.
 
 ## Responsiveness
+
+### Am I Responsive?
+
+<img src="assets/img/Am I Responsive.png">
+ 
  * This website has been tested on small, medium and large screens. 
+ * This website even thought playble and visible in small screens, it doesn't provide the best user experience.
  * Xs screens have only been tested in the responsive setting on Google Developer tools. 
 
 # Deployment 
@@ -109,26 +154,27 @@ The steps taken were the following:
 * For GitHub page live link [Click here!](https://deborasantos28.github.io/milestone-project-1/)
 Need to include user stories 
 
-# User Stories
-| User Story | Acceptance Criteria |
-|--|--| 
-| As a member of the LGBTQ+ and a user of this website I would like to know more about this charity.| * Scroll down to the end of the page. <br /> * On the left corner of the footer access the contact details and Address <br /> * Alternatively, contact us directly on social medias and discord chat |
-As member of the community and music enthusiast, I would like to be a part of this charity activities. | * On top of the page, navigate throught the menu <br /> * Click on the Join-us option on the menu <br /> * Fill in the required fields on the provided form <br /> * The form and the reasons for wanting to join the charity will be reviewed | 
 # Credits
 
-* For the Gallery I used the code from [MDB Bootstrap Static Gallery](https://mdbootstrap.com/docs/standard/extended/gallery/#section-lightbox) for a responsive and simple layout. A few alterations were made to the code along with the customized CSS. 
+* For this Project I took Ideas and followed a tutorial from the following two youtube videos:
+[How to Make a card game](https://www.youtube.com/watch?v=28VfzEiJgy4&list=PLXukZvc39PEfAzj9ex0SToyUYfAxbCG_y&index=14)
+[The JavaScript Part of this video](https://www.youtube.com/watch?v=3uuQ3g92oPQ)
 
 * For the Media Queries I used the W3Schools example provided. 
 
-* This project was made by using some of Bootstraps code.
+* All Credits for the franchise go to Bethesda Softworks, as Fallout is their product.
+
+* This project was made using some Bootstrap.
 
 ## Contents
 
 ## Resources 
 * Images
+   * All Perk Cards were taken from Pinterest by different authors [Pinterest](https://www.pinterest.co.uk/); 
+   * Backgrounds and Gifs were found on Google from various authors [Google](https://www.google.co.uk/)
   
 
 * Colour Palette
-
+   * [COLOURlover](https://www.colourlovers.com/palette/3428762/Fallout?widths=1) 
 
 
