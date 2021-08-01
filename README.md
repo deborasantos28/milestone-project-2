@@ -11,7 +11,7 @@
 ## Existing Features
 
 * Header
-<img>
+<img src="assets/img/Header-Timer-Move-Counter">
 
    * _The Heart Of Vinyl_ navbar contains 3 main links: Home, Gallery and Join US. The navbar is responsive and identical in all 3 pages. 
    For this Navbar the design has been kept simple and tidy in it's appearence 

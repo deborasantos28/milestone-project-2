@@ -15,8 +15,8 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	backdrop-filter: blur(1rem);
-	backdrop-filter: cover;
+	/*backdrop-filter: blur;
+	backdrop-filter: cover;*/
   }
   
   .page-title {
@@ -34,8 +34,9 @@
   }
   
   .game-info {
-	color: #FFBB89;
+	color: black;
 	font-size: 4em;
+	font-family: "Lobster Two", sans-serif;
   }
   
   .game-container {
@@ -84,33 +85,15 @@
   
   .card-back {
 	background-color: black;
-	border-color: 1px 1px 1px rgba(25, 149, 21);
+	border-color: 1px rgba(25, 149, 21);
 	transform: rotateY(0); 
   }
   
-  /*.card-face:hover .vault-boy-bg {
-	width: 52px;
-	height: 52px;
-  }*/
-  
-  
-  /*.vault-boy-bg {
-	align-self: flex-start;
-	transition: transform 100ms ease-in-out;
-	transform: translateY(-10px);
-  }*/
-  
-  /*.card-back:hover .vault-boy-bg {
-	transform: translateY(0);
-  }*/
   
   .card-value {
 	transform: scale(1);
   }
   
-  /*.card-front:hover .card-value {
-	transform: scale(1);
-  }*/
   
   .card-front {
 	background-color: black;
@@ -179,10 +162,7 @@
 .footer > p {
 	font-size: 1em;
 	padding: 1em;
-}
-
-.footer a:link,
-.footer a:visited {
 	color: black;
 	text-decoration: none;
 }
+
