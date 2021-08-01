@@ -1,148 +1,188 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  display: flex-wrap;
-  background-color: black;
-  background: url(../img/fallout-pipboy-screen.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  backdrop-filter: blur(1rem);
-  backdrop-filter: cover;
-}
-
-/*
-.pre-loading-screen {
-  position: fixed;
-top: 0;
-left: 0;
-height: 100%;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-} 
-
-.disappear{
-  animation: vanish 3s forwards;
-}
-@keyframes vanish {
-  100%{
-    opacity: 0;
-    visibility: hidden;
+	box-sizing: border-box;
   }
+  
+  html {
+	min-height: 100vh;
+	cursor: pointer;
+	font-family: "Lobster", sans-serif;
+  }
+  
+  body {
+	margin: 0;
+	background-color: black;
+	background: url(../img/fallout-pipboy-screen.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	backdrop-filter: blur(1rem);
+	backdrop-filter: cover;
+  }
+  
+  .page-title {
+	color: black;
+	font-family: "Lobster", sans-serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 3em;
+  }
+  
+  .game-info-container {
+	grid-column: 1 / -1;
+	display: flex;
+	justify-content: space-between;
+  }
+  
+  .game-info {
+	color: #FFBB89;
+	font-size: 4em;
+  }
+  
+  .game-container {
+	margin: 50px auto;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	grid-gap: 10px;
+	justify-content: center;
+	perspective: 500px;
+  }
+
+  .card {
+	position: relative;
+	cursor: pointer;
+	height: 175px;
+	width: 125px;
+	border: transparent;
+	padding: 0px;
+  }
+  
+  div, .card{
+	  background: transparent;
+  }
+  
+  .card-face {
+	position: absolute;
+	display: flex;
+	
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	border-width: 1px;
+	border-style: solid;
+	overflow: hidden;
+	transition: transform 500ms ease-in-out;
+	backface-visibility: hidden;
+  }
+  
+  .card.visible .card-back {
+	transform: rotateY(-180deg); 
+  }
+  
+  .card.visible .card-front {
+	transform: rotateY(0); 
+  }
+  
+  .card-back {
+	background-color: black;
+	border-color: 1px 1px 1px rgba(25, 149, 21);
+	transform: rotateY(0); 
+  }
+  
+  /*.card-face:hover .vault-boy-bg {
+	width: 52px;
+	height: 52px;
+  }*/
+  
+  
+  /*.vault-boy-bg {
+	align-self: flex-start;
+	transition: transform 100ms ease-in-out;
+	transform: translateY(-10px);
+  }*/
+  
+  /*.card-back:hover .vault-boy-bg {
+	transform: translateY(0);
+  }*/
+  
+  .card-value {
+	transform: scale(1);
+  }
+  
+  /*.card-front:hover .card-value {
+	transform: scale(1);
+  }*/
+  
+  .card-front {
+	background-color: black;
+	border-color: #333;
+	transform: rotateY(180deg);
+  }
+  
+  .overlay-text {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	display: none;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: rgba(25, 149, 21);
+	font-family: "Lobster", sans-serif;
+	transition: background-color 500ms, font-size 500ms;
+  }
+  
+  .overlay-text-small {
+	font-size: .3em;
+  }
+  
+  .overlay-text.visible {
+	display: flex;
+	animation: overlay-grow 500ms forwards;
+  }
+  
+  
+  
+  @keyframes overlay-grow {
+	from {
+	  background-color: rgba(0, 0, 0, 0);
+	  font-size: 0;
+	}
+	to {
+	  background-color: rgba(0, 0, 0, .8);
+	  font-size: 10em;
+	}
+  }
+  
+  @media (max-width: 600px) {
+	.game-container {
+	  grid-template-columns: repeat(2, auto)
+	}
+  
+	.game-info-container {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  }
+
+  .footer {
+	color: #666;
+	margin-bottom: 2em;
 }
-*/
 
-
-#page-title {
-  font-family: 'Lobster', sans-serif;
-  font-weight: 400;
-  font-size: 3rem;
-  text-align: center;
-  color: black;
+.footer, h3 {
+	text-align: center;
 }
 
-.game-info-container {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+.footer > p {
+	font-size: 1em;
+	padding: 1em;
 }
 
-.game-info {
-  font-family: 'Lobster Two', sans-serif;
-  font-weight: 400;
-  color: black;
-  font-size: 3rem;
-}
-
-.game-container {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 10px;
-  margin: 50px;
-  justify-content: center;
-  perspective: 500px;
-}
-
-/* Using the prespective properties, a 3D element effect is created and applied to the cards */
-
-.memory-game {
-  width: 640px;
-  height: 640px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  perspective: 1000px;
-}
-
-
-#page-intro {
-  font-family: 'Lobster Two', sans-serif;
-  font-size: 2rem;
-  color: black;
-  text-align: center;
-}
-
-
-/* With the prespective properties in place in both .memory-game and .game-container, a transform-style of preserve-3d was added to each .perk-card,
-giving them the 3D effect, and more of a depth than the standard 2D flat card */
-
-
-.perk-card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
-  margin: 5px;
-  position: relative;
-  transform: scale(1);
-  transform-style: preserve-3d;
-  transition: transform .5s;
-  box-shadow: 1px 1px 1px rgba(25, 149, 21);
-}
-
-.perk-card:active {
-  transform: scale(0.97);
-  transition: transform .2s;
-}
-
-.perk-card.flip {
-  transform: rotateY(180deg);
-}
-
-/* Using the backface-visibily, the card face is now hidden ready so that the respective image can be added, 
-instead of seeing the same image on both faces */
-
-.card-face,
-.card-back {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  position: absolute;
-  border-radius: 5px;
-  background: black;
-  backface-visibility: hidden;
-}
-
-/* A transform property was used in conjuction with Javascript to be able to archive the rotation or "flip" effect */
-/* transform rotate was added to the Y so that now, we are able to see the face of the card */
-
-.card-face {
-  transform: rotateY(180deg);
-}
-
-div,
-#footer {
-  background-color: transparent;
-}
-
-/* ------------------Restart Button ----------------------- */
-
-.btn {
-  margin-top: 2rem;
+.footer a:link,
+.footer a:visited {
+	color: black;
+	text-decoration: none;
 }
