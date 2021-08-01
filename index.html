@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,104 +15,160 @@
 </head>
 
 <body>
-<!-- <div class="pre-loading-screen">
-    <img src="Pipboy-boot-sequence.gif" alt="">
-  </div> -->
-    <!--<div id="bg-image">
-      <img
-        src="assets/img/fallout-pipboy-screen.jpg"
-        class="img-fluid"
-        alt=""
-      />
-      </div> -->
-  <div id="header">
-    <h1 id="page-title">Atomic Memory
-    </h1>
+  <h1 class="page-title">Atomic Memory</h1>
+  <h2 class="page-title">Find out what makes you S.P.E.C.I.A.L</h2>
+  <div class="overlay-text visible">
+    <img src="assets/img/Vault-Boy-Surprise.gif"> 
+    <span class="overlay-text-small">Click To Start</span>
   </div>
-  <div>
-    <h1 id="page-intro">Find out what makes you S.P.E.C.I.A.L</h1>
+  <div id="game-over-text" class="overlay-text">
+    <img src="assets/img/DefeatModal.gif"> 
+    <span class="overlay-text-small"> Out of time! Click To Restart</span>
   </div>
-  <div class="container">
+  <div id="victory-text" class="overlay-text">
+    <img src="assets/img/VictoryModal.gif">
+    <span class="overlay-text-small">You Won! You are one cool cat! Click to Restart</span>
+  </div>
+
+  <div class="game-container">
     <div class="game-info-container">
       <div class="game-info">
-        <p> Time: <span id="timer"></span></p>
+        Time <span id="time-remaining">100</span>
       </div>
       <div class="game-info">
-        <p>Flips: <span id="flips">0</span></p>
+        Flips <span id="flips">0</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Strength.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Strength.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Perception.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Perception.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Endurance.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Endurance.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Charisma.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Charisma.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Intelligence.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Intelligence.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Agility.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Agility.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+     
+        <img class="card-value" src="assets/img/Perk-card-Lucky.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Lucky.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Joker.jpg">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-back card-face">
+        <img class="vault-boy-bg" src="assets/img/Vault-boy-card-back.jpg">
+      </div>
+      <div class="card-front card-face">
+        <img class="card-value" src="assets/img/Perk-card-Joker.jpg">
       </div>
     </div>
   </div>
-  <section class="memory-game">
-    <div class="perk-card" data-framework="strength">
-      <img class="card-face" src="assets/img/Perk-card-Strength.jpg" alt="Strength Perk Card" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-    <div class="perk-card" data-framework="strength">
-      <img class="card-face" src="assets/img/Perk-card-Strength.jpg" alt="Strength Perk Card" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-
-    <div class="perk-card" data-framework="perception">
-      <img class="card-face" src="assets/img/Perk-card-Perception.jpg" alt="Perception Perk Card" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-    <div class="perk-card" data-framework="perception">
-      <img class="card-face" src="assets/img/Perk-card-Perception.jpg" alt="Perception Perk Card" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-
-    <div class="perk-card" data-framework="endurance">
-      <img class="card-face" src="assets/img/Perk-card-Endurance.jpg" alt="Endurance Perk Card" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-    <div class="perk-card" data-framework="endurance">
-      <img class="card-face" src="assets/img/Perk-card-Endurance.jpg" alt="Endurance Perk Card" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-
-    <div class="perk-card" data-framework="charisma">
-      <img class="card-face" src="assets/img/Perk-card-Charisma.jpg" alt="Perk Card Charisma" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-    <div class="perk-card" data-framework="charisma">
-      <img class="card-face" src="assets/img/Perk-card-Charisma.jpg" alt="Perk Card Charisma" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-
-    <div class="perk-card" data-framework="intelligence">
-      <img class="card-face" src="assets/img/Perk-card-Intelligence.jpg" alt="Perk Card intelligence" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-    <div class="perk-card" data-framework="intelligence">
-      <img class="card-face" src="assets/img/Perk-card-Intelligence.jpg" alt="Perk Card intelligence" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-
-    <div class="perk-card" data-framework="agility">
-      <img class="card-face" src="assets/img/Perk-card-Agility.jpg" alt="Perk Card Agility" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-    <div class="perk-card" data-framework="agility">
-      <img class="card-face" src="assets/img/Perk-card-Agility.jpg" alt="Perk card Agility" />
-      <img class="card-back" src="assets/img/Vault-boy-card-back.jpg" alt="Vault Boy Thumbs up" />
-    </div>
-  </section>
-  <div>
-  <button type="button" type="reset" value="Reset" class="btn btn-success">Restart?
-  </button>
-  </div>
-</div>
-  <footer class="container-fluid">
-    <div class="row">
-      <div class="col-sm-4">
-      </div>
-      <div class="col-sm-4">
-      </div>
-      <div class="col-sm-4">
-        
-      </div>
-  </footer>
-  <script src="assets/js/fallout-memory-game.js"></script>
+  <script src="assets/js/fallout-memory-game.js" async></script>
 </body>
-
 </html>

@@ -7,7 +7,7 @@
 body {
   height: 100vh;
   display: flex-wrap;
-  background-color:black;
+  background-color: black;
   background: url(../img/fallout-pipboy-screen.jpg);
   background-size: cover;
   background-position: center;
@@ -40,34 +40,35 @@ align-items: center;
 */
 
 
-#page-title{
-font-family: 'Lobster', sans-serif;
-font-weight: 400;
-font-size: 3rem;
-text-align: center;
-color: black;
+#page-title {
+  font-family: 'Lobster', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  color: black;
 }
 
 .game-info-container {
-grid-column: 1 / -1;
-display: flex;
-justify-content: space-evenly;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .game-info {
-font-family: 'Lobster Two', sans-serif;
-font-weight: 400;
-color: black;
-font-size: 3rem;
+  font-family: 'Lobster Two', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 3rem;
 }
 
 .game-container {
-display: grid;
-grid-template-columns: repeat(4, auto);
-grid-gap: 10px;
-margin: 50px;
-justify-content: center;
-perspective: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px;
 }
 
 /* Using the prespective properties, a 3D element effect is created and applied to the cards */
@@ -82,11 +83,11 @@ perspective: 500px;
 }
 
 
-#page-intro{
-font-family: 'Lobster Two', sans-serif;
-font-size: 2rem;
-color: black;
-text-align: center;
+#page-intro {
+  font-family: 'Lobster Two', sans-serif;
+  font-size: 2rem;
+  color: black;
+  text-align: center;
 }
 
 
@@ -102,7 +103,7 @@ giving them the 3D effect, and more of a depth than the standard 2D flat card */
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
-  box-shadow: 1px 1px 1px rgba(25,149,21);
+  box-shadow: 1px 1px 1px rgba(25, 149, 21);
 }
 
 .perk-card:active {
@@ -118,8 +119,7 @@ giving them the 3D effect, and more of a depth than the standard 2D flat card */
 instead of seeing the same image on both faces */
 
 .card-face,
-.card-back
- {
+.card-back {
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -136,12 +136,13 @@ instead of seeing the same image on both faces */
   transform: rotateY(180deg);
 }
 
-div, #footer {
+div,
+#footer {
   background-color: transparent;
 }
 
 /* ------------------Restart Button ----------------------- */
 
 .btn {
-margin-top: 2rem;
+  margin-top: 2rem;
 }

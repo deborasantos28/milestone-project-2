@@ -78,8 +78,10 @@ function resetBoard() {
     card.style.order = randomPos;
   });
 })();
+
 //Looped through the list of cards, by attaching an Event Listener to each card
 //It will listen for a click command and execute the flipCard function
+
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 
@@ -95,14 +97,15 @@ var timeLeft = 60;
         clearTimeout(timerId);
 
       } else {
-        elem.innerHTML = timeLeft + ' sec remaining';
+        elem.innerHTML = timeLeft + ' sec';
         timeLeft--;
       }
     }
 
     // Game Counter 
     var score = 0;
-    function points(){
+    
+    function moveCounter(){
       let card1 = firstCard;
       let card2 = secondCard;
 
@@ -113,8 +116,6 @@ var timeLeft = 60;
     }
  document.getElementById("flips").innerHTML = score;
 }
-var score = 0;
-    let card1;
-    document.getElementById('flips').innerHTML;
+
  
 
